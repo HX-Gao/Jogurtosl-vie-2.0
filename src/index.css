@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cinzel', serif;
+    --font-serif: 'Newsreader', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #0c0d0a;
+    color: #ded9c7;
+    font-family: var(--font-serif);
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom military styled scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #12130e;
+}
+::-webkit-scrollbar-thumb {
+  background: #383424;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #544f38;
+}
+
+/* War room map and card animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes dice-shake {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  50% { transform: rotate(10deg) scale(1.15); }
+  75% { transform: rotate(-6deg) scale(1.08); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes map-flare {
+  0% { filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.4)); }
+  50% { filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.8)); }
+  100% { filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.4)); }
+}
+
+.animate-dice {
+  animation: dice-shake 0.4s ease-in-out;
+}
+
+.animate-flare {
+  animation: map-flare 2s infinite ease-in-out;
+}

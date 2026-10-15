@@ -1,0 +1,6 @@
+{
+  "name": "Jogurtoslávie — Historická strategická hra (1941–1944)",
+  "description": "Edukativní historická tahová strategie a karetní hra o jugoslávském partyzánském odboji a osvobození Bělehradu v letech 1941–1944.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
